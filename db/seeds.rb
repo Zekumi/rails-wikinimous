@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "faker"
+require 'i18n'
+I18n.reload!
+
+puts 'Creating 10 fake articles...'
+10.times do
+  article = Article.new(
+    title: Faker::JapaneseMedia::OnePiece.character, content: Faker::JapaneseMedia::OnePiece.quote #=> "ONE PIECE IS REAL!"
+  )
+  article.save!
+end
+puts 'Finished!'

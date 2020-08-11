@@ -1,0 +1,18 @@
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<%= form_for (@article) do |f| %>
+<div class="form-group" style="margin-left:45px;">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+
+<div class="form-group" style="margin-left:45px">
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+</div>
+
+
+<div class="form-group" style="margin-left:45px">
+  <%= f.submit class: "btn btn-primary" %>
+</div>
+<% end %>

@@ -1,0 +1,18 @@
+<div class="banner border-bottom">
+  <p> Wikinimous </p>
+  <p> <%= link_to "Add a new article", articles_new_path, :class => 'new_article'  %> </p>
+</div>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+
+<h1 style="margin:0px 0px 10px 45px" ><%= @article.title %></h1>
+<h3 class="btn btn-primary" style="opacity:1"> <%= @article.content %></h3>
+
+<div class ="redirect">
+  <p><%= link_to "Back to list", articles_path, :class => 'article_links' %></p>
+  <p><%= link_to "Edit article", edit_article_path(@article), :class => 'article_links' %></p>
+  <p><%= link_to "Delete article", article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, :class => 'article_links' %></p>
+</div>
+
+
+

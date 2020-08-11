@@ -1,0 +1,17 @@
+<div class="banner border-bottom">
+  <p> Wikinimous </p>
+  <p> <%= link_to "Add a new article", articles_new_path, :class => 'new_article'  %> </p>
+</div>
+<h1 > One Piece quotes</h1>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+
+<ul style="list-style-type: none">
+  <% @articles.each do |article| %>
+    <li> <%= link_to article.title, article_path(article), :class => 'article_links'  %></li>
+  <% end %>
+</ul>
+
+
+
+
+
